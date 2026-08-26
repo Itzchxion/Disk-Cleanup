@@ -5,7 +5,8 @@
 ---
 
 > [!WARNING]
-> Do Not Interrupt or Power Off During Execution:
+Do Not Interrupt or Power Off During Execution:
+
 [1] Schedule Disk Scan (CHKDSK)
 EN: Marks drive C: for a disk check on next reboot to find and fix file system errors.
 TH: ตั้งค่าให้ตรวจสอบข้อผิดพลาดของดิสก์ C: ตอนรีสตาร์ทเครื่องครั้งถัดไป
