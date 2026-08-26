@@ -22,27 +22,32 @@ if %errorLevel% == 0 (
 echo ===================================================
 echo             System Maintenance Tool
 echo ===================================================
-echo [1] Scan and Repair Disk (CHKDSK)
+echo [1] Schedule Disk Scan on Next Reboot (CHKDSK C:)
 echo [2] Full System Repair (DISM + SFC /Scannow)
 echo [3] Clean Temp Files / System Cache / Update Cache
 echo [4] Toggle Hibernate Status [Current: %HIB_STATUS%]
 echo [5] Run All Tasks (1 - 4)
-echo [6] Exit
+echo [6] Restart Computer Now
+echo [7] Exit
 echo ===================================================
-set /p choice="Please select an option (1-6): "
+set /p choice="Please select an option (1-7): "
 
 if "%choice%"=="1" goto opt1
 if "%choice%"=="2" goto opt2
 if "%choice%"=="3" goto opt3
 if "%choice%"=="4" goto opt4
 if "%choice%"=="5" goto opt5
-if "%choice%"=="6" exit
+if "%choice%"=="6" goto opt6
+if "%choice%"=="7" exit
 goto menu
 
 :opt1
 cls
-echo [Running CHKDSK C: /f /r...]
-chkdsk C: /f /r
+echo [Setting up Disk Check for Next Reboot...]
+fsutil dirty set C:
+echo.
+echo Disk C: has been marked for repair. 
+echo Please RESTART your computer to start the disk check process.
 pause
 goto menu
 
@@ -109,10 +114,19 @@ echo 3/4 Repairing System Files via DISM and SFC...
 DISM.exe /Online /Cleanup-image /Restorehealth
 sfc /scannow
 
-echo 4/4 Scheduling Disk Check...
-chkdsk C: /f /r
+echo 4/4 Scheduling Disk Check for next reboot...
+fsutil dirty set C:
 
 echo ===================================================
-echo All maintenance tasks completed!
+echo All tasks completed! 
+echo NOTE: Please RESTART your computer now to perform the scheduled Disk Check.
+pause
+goto menu
+
+:opt6
+cls
+echo [Restarting System...]
+echo The computer will restart in 5 seconds. Save your work!
+shutdown /r /t 5
 pause
 goto menu
