@@ -19,3 +19,16 @@
 * **[7] Check Disk Space:** Shows used, free, and total space for every drive on the computer.
 * **[8] Reset Network:** Flushes DNS, renews IP, and resets Winsock/TCP-IP to fix internet connection issues.
 * **[9] Restart Computer Now:** Restarts the PC after a 5-second countdown and confirmation prompt.
+
+---
+
+### 🚀 How to Launch / Run Script
+
+#### Option 1: Download File directly
+* Download [`Cleanup.bat`](https://github.com/Itzchxion/Disk-Cleanup/raw/main/Cleanup.bat) or [`Cleanup_code.cmd`](https://github.com/Itzchxion/Disk-Cleanup/raw/main/Cleanup_code.cmd)
+* Right-click the downloaded file and select **"Run as administrator"**
+
+#### Option 2: Copy Code & Run manually
+1. Copy all source code from [`Cleanup.bat`](https://raw.githubusercontent.com/Itzchxion/Disk-Cleanup/main/Cleanup.bat)
+2. Open **Command Prompt (CMD)** as **Administrator**
+3. Paste the code into the console and press **Enter**
