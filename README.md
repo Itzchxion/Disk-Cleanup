@@ -43,5 +43,5 @@ TH: ล้าง DNS, ต่ออายุ IP และรีเซ็ต Winso
 EN: Restarts the PC after a 5-second countdown and confirmation prompt.
 TH: รีสตาร์ทเครื่องหลังนับถอยหลัง 5 วินาที พร้อมถามยืนยันก่อน
 
-### Launch with UI
+### Launch with .bat
 - None
