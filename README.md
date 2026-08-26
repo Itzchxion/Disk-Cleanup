@@ -19,11 +19,3 @@
 * **[7] Check Disk Space:** Shows used, free, and total space for every drive on the computer.
 * **[8] Reset Network:** Flushes DNS, renews IP, and resets Winsock/TCP-IP to fix internet connection issues.
 * **[9] Restart Computer Now:** Restarts the PC after a 5-second countdown and confirmation prompt.
-
----
-
-### 🚀 Launch Method
-
-```bat
-:: Run the script directly via CMD (Admin)
-path\to\your_script.bat
